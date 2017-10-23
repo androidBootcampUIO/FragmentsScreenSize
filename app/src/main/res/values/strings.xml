@@ -1,3 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="action_settings">Settings</string>
+
     <string name="app_name">FragmentsScreenSize</string>
+
+    <string name="bulbasaur">Bulbasaur</string>
+    <string name="bulbasaur_descripcion">Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun\'s rays, the seed grows progressively larger.</string>
+
+    <string name="charmander">Charmander</string>
+    <string name="charmander_descripcion">The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.</string>
+
+    <string name="pikachu">Pikachu</string>
+    <string name="pikachu_descripcion">This Pokémon has electricity-storing pouches on its cheeks. These appear to become electrically charged during the night while Pikachu sleeps. It occasionally discharges electricity when it is dozy after waking up.</string>
+
+    <string name="squirtle">Squirtle</string>
+    <string name="squirtle_descripcion">Squirtle\'s shell is not merely used for protection. The shell\'s rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.</string>
 </resources>
