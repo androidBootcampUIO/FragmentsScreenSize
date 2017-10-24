@@ -5,19 +5,19 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements
         PokemonFragment.OnPokemonFragmentInteractionListener {
 
     private int second_fragment_container;
+    private int first_fragment_container;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int first_fragment_container = R.id.fragment_container;
+        first_fragment_container = R.id.fragment_container;
         second_fragment_container = R.id.second_fragment_container;
 
         PokemonFragment pokemonFragment = PokemonFragment.newInstance();
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     private boolean hasTwoPanels() {
-        return findViewById(second_fragment_container)!=null;
+        return findViewById(second_fragment_container) != null;
     }
 
     private void showFragment(Fragment fragment, String tag, int target) {
@@ -40,12 +40,12 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onPokemonClicked(String pokemon) {
-        Toast.makeText(this, pokemon, Toast.LENGTH_SHORT).show();
+        PokemonDetailsFragment pokemonDetailsFragment = PokemonDetailsFragment.newInstance(pokemon);
 
-        if(hasTwoPanels()) {
-            Toast.makeText(this, "se debe mostrar en el 2do panel", Toast.LENGTH_SHORT).show();
+        if (hasTwoPanels()) {
+            showFragment(pokemonDetailsFragment, "pokemon", second_fragment_container);
         } else {
-            Toast.makeText(this, "se debe mostrar en el panel principal", Toast.LENGTH_SHORT).show();
+            showFragment(pokemonDetailsFragment, "pokemon", first_fragment_container);
         }
     }
 }
